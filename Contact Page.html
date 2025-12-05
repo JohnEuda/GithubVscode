@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simple HTML Header — Sample</title>
+  <style>
+    /* Simple, lightweight styles for the header sample */
+    :root{
+      --bg:#ffffff;
+      --accent:#0b74de;
+      --text:#111;
+    }
+    body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; color:var(--text); background:var(--bg)}
+    .site-header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:1rem;
+      padding:0.75rem 1rem;
+      border-bottom:1px solid #eee;
+    }
+    .logo{display:flex; align-items:center; gap:0.5rem; text-decoration:none; color:inherit}
+    .logo .mark{width:36px; height:36px; background:var(--accent); border-radius:6px; display:inline-grid; place-items:center; color:#fff; font-weight:700}
+    nav ul{list-style:none; margin:0; padding:0; display:flex; gap:0.75rem; align-items:center}
+    nav a{padding:0.5rem 0.6rem; text-decoration:none; color:var(--text); border-radius:6px}
+    nav a:hover, nav a:focus{background:#f3f8ff; color:var(--accent); outline:none}
+    .cta{padding:0.45rem 0.85rem; background:var(--accent); color:#fff; border-radius:8px; text-decoration:none}
+    /* Responsive: collapse nav into a simple menu button on small screens */
+    @media (max-width:640px){
+      nav ul{display:none}
+      .menu-toggle{display:inline-flex}
+    }
+    .menu-toggle{display:none; align-items:center; gap:0.5rem; background:transparent; border:1px solid #eee; padding:0.4rem 0.6rem; border-radius:8px}
+  </style>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <a href="#" class="logo">
+      <span class="mark">L</span>
+      <span class="brand">Logiphy</span>
+    </a>
+
+    <nav role="navigation" aria-label="Main navigation">
+      <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="actions">
+      <a href="#signup" class="cta">Get started</a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+    </div>
+    <div class="header-feature" style="padding:0.75rem 1rem; background:#f7faff; border-bottom:1px solid #e5efff; text-align:center; font-size:0.9rem; color:#0b74de;">
+    🚀 New: Instant Setup — Get your project running in minutes!
+  </div>
+</header>
+
+  <main>
+    <section style="padding:4rem 1rem; text-align:center; max-width:900px; margin:auto;">
+      <h1 style="font-size:2.4rem; margin-bottom:1rem;">Welcome to Logiphy</h1>
+      <p style="font-size:1.1rem; opacity:0.8; max-width:600px; margin:0 auto;">
+        We build streamlined, intuitive, and high‑quality Salesforce solutions tailored for nonprofits, missions, and startups.
+      </p>
+      <a href="#contact" style="display:inline-block; margin-top:1.5rem; padding:0.7rem 1.4rem; background:#0b74de; color:#fff; text-decoration:none; border-radius:10px;">Start a Project</a>
+    </section>
+
+    <section style="padding:3rem 1rem; background:#f8faff;">
+      <div style="max-width:1100px; margin:auto; display:flex; flex-wrap:wrap; gap:2rem; justify-content:center;">
+        <div style="flex:1 1 280px; background:#fff; padding:2rem; border-radius:12px; box-shadow:0 2px 6px rgba(0,0,0,0.05);">
+          <h3 style="margin-top:0;">Custom Applications</h3>
+          <p style="opacity:0.8;">We design intuitive Salesforce apps that simplify your workflows and improve team productivity.</p>
+        </div>
+
+        <div style="flex:1 1 280px; background:#fff; padding:2rem; border-radius:12px; box-shadow:0 2px 6px rgba(0,0,0,0.05);">
+          <h3 style="margin-top:0;">Automation & Optimization</h3>
+          <p style="opacity:0.8;">From flows to Apex, we optimize your system to work exactly the way your team needs.</p>
+        </div>
+
+        <div style="flex:1 1 280px; background:#fff; padding:2rem; border-radius:12px; box-shadow:0 2px 6px rgba(0,0,0,0.05);">
+          <h3 style="margin-top:0;">Training & Support</h3>
+          <p style="opacity:0.8;">We provide training, documentation, and ongoing support to ensure long‑term success.</p>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding:4rem 1rem; max-width:950px; margin:auto; text-align:center;">
+      <h2 style="font-size:2rem; margin-bottom:1rem;">Why Choose Logiphy?</h2>
+      <p style="font-size:1.05rem; opacity:0.8; max-width:650px; margin:0 auto 3rem;">
+        Your mission is unique — your tools should be too. We create Salesforce solutions that match how you actually work.
+      </p>
+
+      <ul style="list-style:none; padding:0; margin:0; text-align:left; max-width:600px; margin:auto; line-height:1.8;">
+        <li>• Tailored Salesforce development</li>
+        <li>• Clear communication and smooth collaboration</li>
+        <li>• Nonprofit‑focused experience</li>
+        <li>• UI‑driven approach for easy user adoption</li>
+        <li>• Quality-tested workflows and automation</li>
+      </ul>
+    </section>
+    <section id="about" style="padding:4rem 1rem; max-width:900px; margin:auto;">
+    <h1 style="font-size:2.4rem; margin-bottom:1rem; text-align:center;">About Us</h1>
+    <p style="font-size:1.1rem; opacity:0.85; text-align:center; max-width:650px; margin:0 auto 2.5rem;">
+      Logiphy is a Salesforce-focused solutions studio dedicated to empowering nonprofits, missions, and startups with tools that simplify operations and amplify impact.
+    </p>
+
+    <div style="display:flex; flex-wrap:wrap; gap:2rem; align-items:center; justify-content:center; margin-bottom:3rem;">
+      <div style="flex:1 1 320px;">
+        <h2 style="margin-bottom:0.7rem;">Our Story</h2>
+        <p style="opacity:0.8; line-height:1.7;">
+          Logiphy was built with a simple belief: technology should make work easier — not harder. With years of experience in Salesforce administration, design, and development, our team saw a gap in the market for solutions that are not only technically strong but also intuitive and user-friendly.
+        </p>
+        <p style="opacity:0.8; line-height:1.7;">
+          Today, we help organizations build systems that reduce manual work, improve accuracy, and create enjoyable user experiences.
+        </p>
+      </div>
+
+      <div style="flex:1 1 280px; background:#f8faff; padding:1.5rem; border-radius:12px; box-shadow:0 2px 6px rgba(0,0,0,0.05);">
+        <h3 style="margin-top:0;">What Drives Us</h3>
+        <ul style="padding-left:1rem; line-height:1.8; opacity:0.85;">
+          <li>Empowering people through intuitive technology</li>
+          <li>Building with empathy and understanding</li>
+          <li>Delivering scalable and future-ready solutions</li>
+          <li>Ensuring every user feels confident using their tools</li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="padding:2rem; background:#f8faff; border-radius:12px; margin-top:1rem; box-shadow:0 2px 6px rgba(0,0,0,0.05);">
+      <h2 style="margin-top:0; text-align:center;">Our Mission</h2>
+      <p style="text-align:center; max-width:700px; margin:0 auto; opacity:0.85; line-height:1.7;">
+        To create meaningful, user-centered Salesforce systems that free teams from technical frustration and help them focus on what truly matters — their mission.
+      </p>
+    </div>
+  </section>
+
+  <section id="contact" style="padding:4rem 1rem; max-width:900px; margin:0 auto;">
+    <h1 style="font-size:2.2rem; margin-bottom:1rem; text-align:center;">Contact Us</h1>
+    <p style="font-size:1.05rem; opacity:0.85; text-align:center; max-width:600px; margin:0 auto 2.5rem;">
+      Have a question, a project idea, or need help with Salesforce? We're here to assist you.
+    </p>
+
+    <div style="display:flex; flex-wrap:wrap; gap:2rem; justify-content:center;">
+      <div style="flex:1 1 300px; background:#f8faff; padding:2rem; border-radius:12px; box-shadow:0 2px 6px rgba(0,0,0,0.05);">
+        <h3 style="margin-top:0;">Get in Touch</h3>
+        <p style="opacity:0.8; line-height:1.7;">Fill out the form and we'll get back to you as soon as possible.</p>
+
+        <form style="display:flex; flex-direction:column; gap:1rem; margin-top:1rem;">
+          <input type="text" placeholder="Your Name" style="padding:0.7rem; border-radius:8px; border:1px solid #ddd;" required />
+          <input type="email" placeholder="Your Email" style="padding:0.7rem; border-radius:8px; border:1px solid #ddd;" required />
+          <textarea placeholder="Your Message" rows="5" style="padding:0.7rem; border-radius:8px; border:1px solid #ddd; resize:vertical;"></textarea>
+          <button type="submit" style="padding:0.75rem; background:#0b74de; color:#fff; border:none; border-radius:10px; cursor:pointer;">Send Message</button>
+        </form>
+      </div>
+
+      <div style="flex:1 1 260px; padding:1rem;">
+        <h3>Contact Details</h3>
+        <p style="opacity:0.8; line-height:1.8;">
+          <strong>Email:</strong> hello@logiphy.com<br />
+          <strong>Location:</strong> Philippines<br />
+        </p>
+
+        <h3 style="margin-top:1.5rem;">Business Hours</h3>
+        <p style="opacity:0.8; line-height:1.8;">
+          Monday – Friday<br />
+          9:00 AM – 5:00 PM (GMT+8)
+        </p>
+
+        <h3 style="margin-top:1.5rem;">Social</h3>
+        <ul style="list-style:none; padding:0; line-height:1.8; opacity:0.85;">
+          <li><a href="#" style="text-decoration:none; color:#0b74de;">Facebook</a></li>
+          <li><a href="#" style="text-decoration:none; color:#0b74de;">LinkedIn</a></li>
+          <li><a href="#" style="text-decoration:none; color:#0b74de;">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+  <script>
+    // Small script to toggle the nav on narrow screens
+    const btn = document.querySelector('.menu-toggle');
+    const navList = document.querySelector('nav ul');
+    if(btn){
+      btn.addEventListener('click', ()=>{
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        if(navList) navList.style.display = expanded ? 'none' : 'flex';
+      })
+    }
+  </script>
+  <footer style="background:#111; color:#fff; padding:2rem 1rem; margin-top:2rem;">
+    <div style="max-width:1200px; margin:0 auto; display:flex; flex-wrap:wrap; gap:2rem; justify-content:space-between;">
+      <div>
+        <h3 style="margin:0 0 0.5rem 0; font-size:1.1rem;">Logiphy</h3>
+        <p style="margin:0; opacity:0.8; max-width:260px;">Building seamless, intuitive Salesforce solutions for nonprofits, missions, and startups.</p>
+      </div>
+
+      <div>
+        <h4 style="margin-bottom:0.5rem; font-size:1rem;">Links</h4>
+        <ul style="list-style:none; padding:0; margin:0; line-height:1.8;">
+          <li><a href="#features" style="color:#fff; text-decoration:none; opacity:0.85;">Features</a></li>
+          <li><a href="#pricing" style="color:#fff; text-decoration:none; opacity:0.85;">Pricing</a></li>
+          <li><a href="#about" style="color:#fff; text-decoration:none; opacity:0.85;">About</a></li>
+          <li><a href="#contact" style="color:#fff; text-decoration:none; opacity:0.85;">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 style="margin-bottom:0.5rem; font-size:1rem;">Follow Us</h4>
+        <ul style="list-style:none; padding:0; margin:0; line-height:1.8;">
+          <li><a href="#" style="color:#fff; text-decoration:none; opacity:0.85;">Facebook</a></li>
+          <li><a href="#" style="color:#fff; text-decoration:none; opacity:0.85;">LinkedIn</a></li>
+          <li><a href="#" style="color:#fff; text-decoration:none; opacity:0.85;">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top:2rem; opacity:0.6; font-size:0.85rem;">
+      © 2025 Logiphy. All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>
