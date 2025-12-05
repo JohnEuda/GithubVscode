@@ -1,0 +1,12 @@
+[1mdiff --git a/Contact Page.html b/Contact Page.html[m
+[1mindex 3e667e1..6a43afb 100644[m
+[1m--- a/Contact Page.html[m	
+[1m+++ b/Contact Page.html[m	
+[36m@@ -11,6 +11,7 @@[m
+       --accent:#0b74de;[m
+       --text:#111;[m
+     }[m
+[32m+[m[41m    [m
+     body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; color:var(--text); background:var(--bg)}[m
+     .site-header{[m
+       display:flex;[m
