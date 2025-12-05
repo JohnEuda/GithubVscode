@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simple HTML Header — Sample</title>
+  <style>
+    /* Simple, lightweight styles for the header sample */
+    :root{
+      --bg:#ffffff;
+      --accent:#0b74de;
+      --text:#111;
+    }
+    body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; color:var(--text); background:var(--bg)}
+    .site-header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:1rem;
+      padding:0.75rem 1rem;
+      border-bottom:1px solid #eee;
+    }
+    .logo{display:flex; align-items:center; gap:0.5rem; text-decoration:none; color:inherit}
+    .logo .mark{width:36px; height:36px; background:var(--accent); border-radius:6px; display:inline-grid; place-items:center; color:#fff; font-weight:700}
+    nav ul{list-style:none; margin:0; padding:0; display:flex; gap:0.75rem; align-items:center}
+    nav a{padding:0.5rem 0.6rem; text-decoration:none; color:var(--text); border-radius:6px}
+    nav a:hover, nav a:focus{background:#f3f8ff; color:var(--accent); outline:none}
+    .cta{padding:0.45rem 0.85rem; background:var(--accent); color:#fff; border-radius:8px; text-decoration:none}
+    /* Responsive: collapse nav into a simple menu button on small screens */
+    @media (max-width:640px){
+      nav ul{display:none}
+      .menu-toggle{display:inline-flex}
+    }
+    .menu-toggle{display:none; align-items:center; gap:0.5rem; background:transparent; border:1px solid #eee; padding:0.4rem 0.6rem; border-radius:8px}
+  </style>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <a href="#" class="logo">
+      <span class="mark">L</span>
+      <span class="brand">Logiphy</span>
+    </a>
+
+    <nav role="navigation" aria-label="Main navigation">
+      <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="actions">
+      <a href="#signup" class="cta">Get started</a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+    </div>
+    <div class="header-feature" style="padding:0.75rem 1rem; background:#f7faff; border-bottom:1px solid #e5efff; text-align:center; font-size:0.9rem; color:#0b74de;">
+    🚀 New: Instant Setup — Get your project running in minutes!
+  </div>
+</header>
+
+  <main>
+    <section style="padding:2rem;">
+      <h1>Simple header demo</h1>
+      <p>Open this file in VS Code and try resizing the window to see the basic responsive behaviour.</p>
+    </section>
+  </main>
+
+  <script>
+    // Small script to toggle the nav on narrow screens
+    const btn = document.querySelector('.menu-toggle');
+    const navList = document.querySelector('nav ul');
+    if(btn){
+      btn.addEventListener('click', ()=>{
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        if(navList) navList.style.display = expanded ? 'none' : 'flex';
+      })
+    }
+  </script>
+  <footer style="background:#111; color:#fff; padding:2rem 1rem; margin-top:2rem;">
+    <div style="max-width:1200px; margin:0 auto; display:flex; flex-wrap:wrap; gap:2rem; justify-content:space-between;">
+      <div>
+        <h3 style="margin:0 0 0.5rem 0; font-size:1.1rem;">Logiphy</h3>
+        <p style="margin:0; opacity:0.8; max-width:260px;">Building seamless, intuitive Salesforce solutions for nonprofits, missions, and startups.</p>
+      </div>
+
+      <div>
+        <h4 style="margin-bottom:0.5rem; font-size:1rem;">Links</h4>
+        <ul style="list-style:none; padding:0; margin:0; line-height:1.8;">
+          <li><a href="#features" style="color:#fff; text-decoration:none; opacity:0.85;">Features</a></li>
+          <li><a href="#pricing" style="color:#fff; text-decoration:none; opacity:0.85;">Pricing</a></li>
+          <li><a href="#about" style="color:#fff; text-decoration:none; opacity:0.85;">About</a></li>
+          <li><a href="#contact" style="color:#fff; text-decoration:none; opacity:0.85;">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 style="margin-bottom:0.5rem; font-size:1rem;">Follow Us</h4>
+        <ul style="list-style:none; padding:0; margin:0; line-height:1.8;">
+          <li><a href="#" style="color:#fff; text-decoration:none; opacity:0.85;">Facebook</a></li>
+          <li><a href="#" style="color:#fff; text-decoration:none; opacity:0.85;">LinkedIn</a></li>
+          <li><a href="#" style="color:#fff; text-decoration:none; opacity:0.85;">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top:2rem; opacity:0.6; font-size:0.85rem;">
+      © 2025 Logiphy. All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>
